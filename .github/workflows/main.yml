@@ -27,7 +27,7 @@ jobs:
           aosp-clang-version: r416183b1
           anykernel3: true
           lxc: true
-          lxc-patch: true
+          lxc-patch: false
           nethunter: true
           nethunter-patch: true
           ccache: true
