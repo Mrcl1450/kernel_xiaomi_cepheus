@@ -28,3 +28,4 @@ jobs:
           lxc-patch: false
           nethunter: true
           nethunter-patch: true
+          extra-cmd: CONFIG_VDSO32=n CONFIG_COMPAT=n
