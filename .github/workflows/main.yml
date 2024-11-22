@@ -12,6 +12,9 @@ jobs:
       contents: read
 
     steps:
+    - name: Pre Build
+      run: sudo apt-get install -y libghc-libyaml-dev
+    
     - name: Build Kernel
       uses: dabao1955/kernel_build_action@main
       with:
