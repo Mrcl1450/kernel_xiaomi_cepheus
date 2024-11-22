@@ -30,4 +30,4 @@ jobs:
           lxc-patch: false
           nethunter: true
           nethunter-patch: true
-          extra-cmd: LLVM=1 AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip CONFIG_VDSO32=n
+          extra-cmd: LLVM=1 AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip DTC_FLAGS="-DYAML" LDFLAGS="-lyaml"
