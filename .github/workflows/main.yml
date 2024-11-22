@@ -30,3 +30,4 @@ jobs:
           lxc-patch: false
           nethunter: true
           nethunter-patch: true
+          extra-cmd: LLVM=1 CC=clang CROSS_COMPILE=aarch64-linux-gnu- AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
