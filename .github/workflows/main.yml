@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: dabao1955/kernel_build_action@main
+      uses: dabao1955/kernel_build_action@3rd-gcc
       with:
           kernel-url: https://github.com/Mrcl1450/kernel_xiaomi_cepheus
           kernel-branch: lxc
@@ -30,4 +30,4 @@ jobs:
           lxc-patch: false
           nethunter: true
           nethunter-patch: true
-          extra-cmd: LLVM=1 CC=clang CROSS_COMPILE=aarch64-linux-gnu- AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          extra-cmd: LLVM=1 CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
