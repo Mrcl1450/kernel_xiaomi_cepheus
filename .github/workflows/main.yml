@@ -13,22 +13,19 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: dabao1955/kernel_build_action@3rd-gcc
+      uses: dabao1955/kernel_build_action@main
       with:
           kernel-url: https://github.com/Mrcl1450/kernel_xiaomi_cepheus
           kernel-branch: lxc
           config: cepheus_defconfig
           arch: arm64
           aosp-gcc: true
-          aosp-clang: false
-          other-clang-url: https://github.com/kdrag0n/proton-clang
-          other-clang-branch: master
+          aosp-clang: true
           android-version: 12
-          aosp-clang-version: r416183b1
+          aosp-clang-version: r383902
           anykernel3: true
           lxc: true
           lxc-patch: false
           nethunter: true
           nethunter-patch: false
           disable-lto: true
-          extra-cmd: LLVM=1 CC=clang CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
