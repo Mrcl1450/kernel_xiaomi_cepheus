@@ -20,8 +20,8 @@ jobs:
           kernel-branch: lxc
           config: cepheus_defconfig
           arch: arm64
-          aosp-gcc: false
-          aosp-clang: true
+          aosp-gcc: true
+          aosp-clang: false
           android-version: 12
           aosp-clang-version: r383902
           anykernel3: true
