@@ -12,9 +12,6 @@ jobs:
       contents: read
 
     steps:
-    - name: Pre Build
-      run: sudo apt-get install -y libyaml-dev
-        
     - name: Build Kernel
       uses: dabao1955/kernel_build_action@main
       with:
@@ -33,4 +30,4 @@ jobs:
           lxc-patch: false
           nethunter: true
           nethunter-patch: true
-          extra-cmd: LLVM=1 AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+          extra-cmd: LLVM=1 AR=llvm-ar LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip CONFIG_VDSO32=n
