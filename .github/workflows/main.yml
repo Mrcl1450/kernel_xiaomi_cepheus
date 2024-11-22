@@ -16,6 +16,7 @@ jobs:
       uses: dabao1955/kernel_build_action@main
       with:
           kernel-url: https://github.com/Mrcl1450/kernel_xiaomi_cepheus
+          kernel-dir: msm-4.14
           kernel-branch: lxc
           config: cepheus_defconfig
           arch: arm64
