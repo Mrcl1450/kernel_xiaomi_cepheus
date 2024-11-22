@@ -12,9 +12,6 @@ jobs:
       contents: read
 
     steps:
-    - name: Pre Build
-      run: sudo apt-get install -y libghc-libyaml-dev
-    
     - name: Build Kernel
       uses: dabao1955/kernel_build_action@main
       with:
@@ -25,10 +22,9 @@ jobs:
           aosp-gcc: true
           aosp-clang: true
           android-version: 12
-          aosp-clang-version: r416183b1
+          aosp-clang-version: r383902
           anykernel3: true
           lxc: true
           lxc-patch: false
           nethunter: true
           nethunter-patch: true
-          extra-cmd: CONFIG_VDSO32=n CONFIG_COMPAT=n
